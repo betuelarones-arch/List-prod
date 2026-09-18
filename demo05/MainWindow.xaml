@@ -1,0 +1,24 @@
+﻿<Window x:Class="demo05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:demo05"
+        mc:Ignorable="d"
+        Title="Neptuno - Menu principal" Height="420" Width="700"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="32">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Consultas Neptuno" FontSize="28" FontWeight="SemiBold"
+                   HorizontalAlignment="Center" Margin="0,0,0,28" />
+        <UniformGrid Grid.Row="1" Columns="3" HorizontalAlignment="Center"
+                     VerticalAlignment="Top" Height="150">
+            <Button Content="Productos" Margin="8" Click="Productos_Click" />
+            <Button Content="Categorías" Margin="8" Click="Categorias_Click" />
+            <Button Content="Proveedores" Margin="8" Click="Proveedores_Click" />
+        </UniformGrid>
+    </Grid>
+</Window>

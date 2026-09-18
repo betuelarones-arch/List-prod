@@ -1,0 +1,44 @@
+<Window x:Class="demo05.ProveedoresWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Consultas de proveedores" Height="650" Width="1100"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="16">
+        <TabControl>
+            <TabItem Header="Listado de proveedores">
+                <Grid Margin="8">
+                    <DataGrid x:Name="ProveedoresGrid" AutoGenerateColumns="True" IsReadOnly="True"
+                              CanUserAddRows="False" HorizontalScrollBarVisibility="Auto" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Buscar proveedores">
+                <Grid Margin="8">
+                    <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="*" /></Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Nombre contacto:" VerticalAlignment="Center" Margin="0,0,8,0" />
+                        <TextBox x:Name="NombreContactoTextBox" Width="180" Margin="0,0,16,0" />
+                        <TextBlock Text="Ciudad:" VerticalAlignment="Center" Margin="0,0,8,0" />
+                        <TextBox x:Name="CiudadTextBox" Width="140" Margin="0,0,16,0" />
+                        <Button Content="Buscar" Width="90" Click="BuscarProveedores_Click" />
+                    </StackPanel>
+                    <DataGrid x:Name="BusquedaProveedoresGrid" Grid.Row="1" AutoGenerateColumns="True"
+                              IsReadOnly="True" CanUserAddRows="False" HorizontalScrollBarVisibility="Auto" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Detalles de pedidos">
+                <Grid Margin="8">
+                    <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="*" /></Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Desde:" VerticalAlignment="Center" Margin="0,0,8,0" />
+                        <DatePicker x:Name="FechaDesdePicker" Width="135" Margin="0,0,16,0" />
+                        <TextBlock Text="Hasta:" VerticalAlignment="Center" Margin="0,0,8,0" />
+                        <DatePicker x:Name="FechaHastaPicker" Width="135" Margin="0,0,16,0" />
+                        <Button Content="Consultar" Width="90" Click="DetallesPedidos_Click" />
+                    </StackPanel>
+                    <DataGrid x:Name="DetallesPedidosGrid" Grid.Row="1" AutoGenerateColumns="True"
+                              IsReadOnly="True" CanUserAddRows="False" HorizontalScrollBarVisibility="Auto" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

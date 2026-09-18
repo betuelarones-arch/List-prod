@@ -1,0 +1,10 @@
+<Window x:Class="demo05.ProductosWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Listado de productos" Height="600" Width="1100"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="16">
+        <DataGrid x:Name="ProductosGrid" AutoGenerateColumns="True" IsReadOnly="True"
+                  CanUserAddRows="False" HorizontalScrollBarVisibility="Auto" />
+    </Grid>
+</Window>

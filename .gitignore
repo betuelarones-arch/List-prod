@@ -1,0 +1,27 @@
+# Build output
+**/bin/
+**/obj/
+
+# Visual Studio local files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / ReSharper
+.idea/
+_ReSharper*/
+*.DotSettings.user
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Base de datos local; el script de procedimientos sí se versiona.
+Neptuno12042121.sql
